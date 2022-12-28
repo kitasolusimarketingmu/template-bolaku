@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en-us" style="display:inline">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/style-mobile.css">
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+
+    <link href="assets/styles/css2" rel="stylesheet">    
+    <link rel="stylesheet" href="assets/styles/header.submenu.css">
+    <link rel="stylesheet" href="assets/styles/w3.css">
+
+    <style type="text/css">
+      .sub-menu .gameNav li:hover{
+          text-decoration:underline}
+      .main_width{
+          width: 1050px;
+          background-color:#c30012;
+          padding-bottom:25px;
+      }
+      .sub-menu {
+          top: 27px;
+          padding-top: 10px;
+          padding-bottom: 23px
+      }
+      .arrow-down-submenu{font-size:13px; color:#fff}
+  </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header flex">
+        <div class="logo">
+          <a href="#">
+            <img src="assets/images/logo.png">
+          </a>
+        </div>
+        <div class="headright">
+          <form method="post" action="" id="ctl00" class="form flex" onsubmit="return checkform(this);">
+            <input name="txtUsername" type="text" id="txtUsername" maxlength="12" placeholder="User Name" tabindex="1">
+            <input name="txtPassword" type="password" id="txtPassword" placeholder="Password" tabindex="2">
+            <input name="txtCode" type="text" id="txtCode" placeholder="Code" tabindex="3" maxlength="4">
+            <img class="captcha" id="CaptchaDiv" border="0" align="absmiddle" src="assets/images/img.aspx" width="70px" height="37px" alt="">
+            <button type="button" id="btnSignIn" name="btnSignIn" class="color3 button" tabindex="4">
+              <i style="margin-right: 6px;" class="fas fa-user-lock"></i>Login </button>
+            <button type="button" id="btnReg" class="color2 button register-button">
+              <i style="margin-right: 6px;" class="fas fa-user-edit"></i>Daftar </button>
+          </form>
+        </div>
+        <div class="wrap-collabsible color2">
+          <input id="collapsible" class="toggle" type="checkbox" onclick="open_menu()">
+          <label for="collapsible" class="lbl-toggle color-2" onclick="open_menu()">Menu</label>
+
+          <div class="popup-menu">
+            <div class="w3-container" style="padding: 0px;">
+              <a href=""><button onclick="myFunction('Demo1')" class="w3-button w3-block w3-black w3-left-align"><i class="fas fa-home"></i> HOME</button></a>
+              <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-black w3-left-align">SLOT ▼</button>
+              <div id="Demo1" class="w3-hide w3-container">
+                <ul class="ul-popup">
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/1_afbgaming.png">AFB Gaming </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/2_gamehall.png">Game Hall </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/3_mimigaming.png">MiMi Gaming </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/4_pragmaticplay.png">Pragmatic Play </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/5_jdb.png">JDB </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!importan; color: #ffffff; font-size: 18px;t" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/6_rtgslots.png">RTG Slot </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/7_habanero.png">Habanero </a>
+                  </li>
+                </ul>
+              </div>
+              <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-black w3-left-align">LIVE CASINO ▼</button>
+              <div id="Demo2" class="w3-hide w3-container">
+                <ul class="ul-popup">
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/1_gd88greendragon.png">GD88 </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/2_855crow.png">855 Crown </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/3_LGcasio88.png">LG88 </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/4_gamehall.png">Game Hall </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/5_dreamgaming.png">Dream Gaming </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/6_wmcasio.png">WM Casino </a>
+                  </li>
+                </ul>
+              </div>
+              <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-black w3-left-align">Fish ▼</button>
+              <div id="Demo3" class="w3-hide w3-container">
+                <ul class="ul-popup">
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/1_mgfishing.png">MG Fishing </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/2_ylfishing.png">YL Fishing </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/3_spadegaming.png">Spade Gaming </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/4_jdbfishing.png">JDB Fishing </a>
+                  </li>
+                </ul>
+              </div>
+              <button onclick="myFunction('Demo5')" class="w3-button w3-block w3-black w3-left-align">TOGEL ▼</button>
+              <div id="Demo5" class="w3-hide w3-container">
+                <ul class="ul-popup">
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/1_togel.png">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <button onclick="myFunction('Demo4')" class="w3-button w3-block w3-black w3-left-align">365 Slot ▼</button>
+              <div id="Demo4" class="w3-hide w3-container">
+                <ul class="ul-popup">
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/1_candyCrush.png">Candy Crush </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/2_crazyBomb.png">Crazy Bomb </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/3_lucky777.png">Lucky 777 </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/4_luckyFrog.png">Lucky Frog </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/5_sweetLove.png">Sweet Love </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/6_vs9aztecgemsdx.png">AZTEC GEMS DELUXE </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/7_vs20bonzgold.png">Bonanza Gold </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/8_vs20sugarrush.png">Sugar Rush </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/9_vs20swordofares.png">Sword Of Ares </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/10_vswaysbufking.png">Buffalo King </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/11_BirdsParty.png">Birds Party </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/12_DragonFishing.png">Dragon Fishing </a>
+                  </li class="li-popup">
+                  <li>
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/13_FiveDragonsFishing.png">Five Dragons Fishing </a>
+                  </li>
+                  <li class="li-popup">
+                    <a style="background:none!important; color: #ffffff; font-size: 18px;" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/14_OrientAnimals.png">Orient Animals </a>
+                  </li>
+                </ul>
+              </div>
+              <a href=""><button class="w3-button w3-block w3-black w3-left-align">TANGKAS</button></a>
+              <button onclick="myFunction('Demo6')" class="w3-button w3-block w3-black w3-left-align">POKER ▼</button>
+              <div id="Demo6" class="w3-hide w3-container">
+                <ul class="ul-popup">
+                  <li class="li-popup">
+                    <a style="background:none!important" href="#">
+                      <img class="img-popup" src="assets/images/sub-menu/1_pokerv.png">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <a href=""><button class="w3-button w3-block w3-black w3-left-align">PROMO</button></a>
+            </div>
+
+            <center>
+              <div class="close-popup" onclick="close_menu()">TUTUP MENU</div>
+            </center>
+
+            <script>
+              function myFunction(id) {
+                var x = document.getElementById(id);
+                if (x.className.indexOf("w3-show") == -1) {
+                  x.className += " w3-show";
+                  x.previousElementSibling.className = x.previousElementSibling.className.replace("w3-black", "w3-red");
+                } else {
+                  x.className = x.className.replace(" w3-show", "");
+                  x.previousElementSibling.className = x.previousElementSibling.className.replace("w3-red", "w3-black");
+                }
+              }
+
+              function open_menu() {
+                $('.popup-menu').fadeIn(500);
+              }
+
+              function close_menu() {
+                $('.popup-menu').fadeOut(500);
+              }
+            </script>
+          </div>
+
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <div class="nav">
+                <div class="navbar flex" style="position:relative">
+                  <a href="#">
+                    <i class="fas fa-home"></i>
+                  </a>
+                  <a class="sport-game" href="Main.aspx">SPORTBOOK</a>
+                  <div class="slot-game menu-menu-sub">Slot▼
+                    <div id="sub-menu-slot" class="sub-menu">
+                      <div class="main_width">
+                        <ul class="gameNav">
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/1_afbgaming.png">AFB Gaming </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/2_gamehall.png">Game Hall </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/3_mimigaming.png">MiMi Gaming </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/4_pragmaticplay.png">Pragmatic Play </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/5_jdb.png">JDB </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/6_rtgslots.png">RTG Slot </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/7_habanero.png">Habanero </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="casino-game menu-menu-sub">Live Casino▼
+                    <div id="sub-menu-casino" class="sub-menu">
+                      <div class="main_width">
+                        <ul class="gameNav">
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/1_gd88greendragon.png">GD88 </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/2_855crow.png">855 Crown </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/3_LGcasio88.png">LG88 </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/4_gamehall.png">Game Hall </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/5_dreamgaming.png">Dream Gaming </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/6_wmcasio.png">WM Casino </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fish-game menu-menu-sub">Fish▼
+                    <div id="sub-menu-fish" class="sub-menu">
+                      <div class="main_width">
+                        <ul class="gameNav">
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/1_mgfishing.png">MG Fishing </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/2_ylfishing.png">YL Fishing </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/3_spadegaming.png">Spade Gaming </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/4_jdbfishing.png">JDB Fishing </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="togel-game menu-menu-sub">Togel ▼ 
+                    <div id="sub-menu-togel" class="sub-menu">
+                      <div class="main_width">
+                        <ul class="gameNav">
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/1_togel.png">
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slot365-game menu-menu-sub">365 Slot ▼
+                    <div id="sub-menu-slot365" class="sub-menu">
+                      <div class="main_width">
+                        <ul class="gameNav">
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/1_candyCrush.png">Candy Crush </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/2_crazyBomb.png">Crazy Bomb </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/3_lucky777.png">Lucky 777 </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/4_luckyFrog.png">Lucky Frog </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/5_sweetLove.png">Sweet Love </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/6_vs9aztecgemsdx.png">AZTEC GEMS DELUXE </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/7_vs20bonzgold.png">Bonanza Gold </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/8_vs20sugarrush.png">Sugar Rush </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/9_vs20swordofares.png">Sword Of Ares </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/10_vswaysbufking.png">Buffalo King </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/11_BirdsParty.png">Birds Party </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/12_DragonFishing.png">Dragon Fishing </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/13_FiveDragonsFishing.png">Five Dragons Fishing </a>
+                          </li>
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/14_OrientAnimals.png">Orient Animals </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="tangkas-game" href="">TANGKAS</a>
+                  <div class="poker-game menu-menu-sub">Poker▼ <div id="sub-menu-poker" class="sub-menu">
+                      <div class="main_width">
+                        <ul class="gameNav">
+                          <li>
+                            <a style="background:none!important" href="#">
+                              <img src="assets/images/sub-menu/1_pokerv.png">
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="" target="_blank">PROMOSI</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scrolltext flex">
+          <div class="scrolltextleft">
+            <i style="margin-right: 3px;" class="fas fa-bullhorn"></i>Info
+          </div>
+          <div class="scrolltextinside">
+            <div id="div-marquee">
+              <marquee onmouseout="scrollDelay=1" onmouseover="scrollDelay=10000" scrolldelay="1" scrollamount="4">
+                <a class="Message" href="#_view/msglog.aspx" target="_blank" style="color:#fff; font-family:arial; text-decoration:none">Selamat Datang Di Target Bola | UNTUK DEPOSIT VIA DANA DIKIRIMKAN KE REKENING BCA KAMI YA BOSKU </a>
+              </marquee>
+            </div>
+          </div>
+          <a href="#" class="scrolltextright">
+            <i class="fas fa-headset"></i>Livechat </a>
+        </div>
+      </div>
+      <div class="homepage flex">
+        <div class="slider">
+          <div id="wowslider-container1" class="ws_gestures" style="font-size: 4px;">
+            <div class="ws_images" style="overflow: visible;">
+              <div style="position: relative; width: 100%; font-size: 0px; line-height: 0; max-height: 100%; overflow: hidden;">
+                <img src="assets/images/08.jpg" id="slide0" title="slide" style="width: 100%; visibility: hidden;">
+              </div>
+              <div style="position: absolute; inset: 0px; overflow: hidden;">
+                <div class="ws_list" style="position: absolute; top: 0px; height: 100%; transform: translate3d(0px, 0px, 0px); width: 1000%; left: 0%; display: block;">
+                  <ul style="width: 100%;">
+                    <li style="width: 10%;">
+                      <img src="assets/images/gambar_slider.png" id="slide0" title="slide" style="visibility: visible;">
+                    </li>
+                    <li style="width: 10%;">
+                      <img src="assets/images/gambar_slider.png" id="slide0" title="slide" style="visibility: visible;">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="ws_cover" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 10; background: rgb(255, 255, 255); opacity: 0;">
+                <a href="#" style="display:none;position:absolute;left:0;top:0;width:100%;height:100%"></a>
+              </div>
+              <div class="ws_effect ws_basic_linear" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; opacity: 1;">
+                <div style="position: absolute; z-index: 2; width: 200%; height: 100%; transform: translate3d(-650px, 0px, 0px); left: 0px; right: auto; top: 0px; display: none;">
+                  <div style="position: absolute; left: 0px; top: auto; width: 50%; height: 100%; overflow: hidden;"></div>
+                  <div style="position: absolute; left: 50%; top: auto; width: 50%; height: 100%; overflow: hidden;"></div>
+                </div>
+              </div>
+              <div style="position: absolute; padding: 0px; z-index: 56; right: 15px; bottom: 15px;">
+                <a href="http://wowslider.com/" style="position: relative; display: block; font-size: 15px; width: auto; height: auto; font-family: Arial; font-weight: normal; font-style: normal; padding: 1px 5px; margin: 0px; border-radius: 10px; outline: none;" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+              </div>
+              <div class="ws_controls">
+                <a href="#" class="ws_next">
+                  <span>
+                    <i></i>
+                    <b></b>
+                  </span>
+                </a>
+                <a href="#" class="ws_prev">
+                  <span>
+                    <i></i>
+                    <b></b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <script type="text/javascript" src="assets/js/wowslider.js"></script>
+          <script type="text/javascript" src="assets/js/script.js"></script>
+        </div>
+      </div>
+
+      <div class="headrightmobile">
+        <form method="post" action="" id="ctl00" class="form flex" onsubmit="return checkform(this);">
+          <input name="txtUsername" type="text" id="txtUsername" maxlength="12" placeholder="User Name" tabindex="1">
+          <input name="txtPassword" type="password" id="txtPassword" placeholder="Password" tabindex="2">
+          <table style="width: 100%;">
+            <tr>
+              <td><img class="captcha" id="CaptchaDiv" border="0" align="absmiddle" src="assets/images/img.aspx" width="70px" height="37px" alt=""></td>
+              <td><input name="txtCode" type="text" id="txtCode" placeholder="Code" tabindex="3" maxlength="4"></td>
+            </tr>
+          </table>
+          <button style="margin: 2px 0;" type="button" id="btnSignIn" name="btnSignIn" class="color3 button" tabindex="4">
+            <i style="margin-right: 6px;" class="fas fa-user-lock"></i>Login </button>
+          <button style="margin: 2px 0;" type="button" id="btnReg" class="color2 button register-button">
+            <i style="margin-right: 6px;" class="fas fa-user-edit"></i>Daftar </button>
+          <button style="font-size: 12px; margin: 2px 0; background: #4343ff;" type="button" id="btnReg" class="color2 button">Claim Event Facebook TARGETBOLA </button>
+          <button style="font-size: 12px; margin: 2px 0; background: #348334;" type="button" id="btnReg" class="color2 button">WhatsApp TARGETBOLA </button>
+        </form>
+      </div>
+
+      <div class="contact flex">
+        <a href="#" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+          <h3>Whtasapp</h3> +85xxxxxxxx
+        </a>
+        <a href="#" target="_blank">
+          <i class="fab fa-facebook"></i>
+          <h3>Facebook</h3> Target Bola
+        </a>
+        <a class="invisible-mobile" href="#">
+          <i class="fab fa-instagram"></i>
+          <h3>Instagram</h3> Target Bola
+        </a>
+        <a href="#" target="_blank">
+          <i class="fab fa-telegram-plane"></i>
+          <h3>Telegram</h3> +85xxxxxxxx
+        </a>
+        <a class="invisible-mobile" href="#" target="_blank">
+          <i class="fab fa-line"></i>
+          <h3>Line</h3> +85xxxxxxxx
+        </a>
+      </div>
+      <div class="game flex">
+        <a href="#">
+          <img src="assets/images/slot.jpg">
+        </a>
+        <a href="#">
+          <img src="assets/images/casino.jpg">
+        </a>
+        <a href="#">
+          <img src="assets/images/sportsbook.jpg">
+        </a>
+      </div>
+      <div class="content"></div>
+    </div>
+    <div class="footer color2"> Copyright © 2022.All rights reserved. </div>
+  </body>
+</html>
